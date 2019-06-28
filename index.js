@@ -13,12 +13,12 @@ const tutorials = [
 
 
 function titleCased() {
-  return tutorials.map( tutorial => {
-    tutorial = tutorial.split(" ");
-    for (let i = 0; i < tutorial.length; i++) {
-      tutorial[i] = tutorial[i].charAt(0).toUpperCase() + tutorial[i].slice(1);
+  return tutorials.map( string => {
+    string = string.split(" "); //becomes an array of single words, so can iterate over it.
+    for (let i = 0; i < string.length; i++) {
+      string[i] = string[i].charAt(0).toUpperCase() + string[i].slice(1);   //iterates over each word, capitalizes first letter, joins with rest of word
     }
-    return tutorial.join(" ");
+    return string.join(" ");  //joins each group of words back together
   })
 }
 
